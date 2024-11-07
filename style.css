@@ -1,0 +1,292 @@
+/* General styling for body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 220vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://github.com/bhavishyaiitk/gradesiitk/blob/main/background.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Style for the title container */
+.title-container {
+    background-color: rgba(215, 153, 153, 0.8);
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the title */
+h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: #000000;
+    margin: 10px auto;
+}
+
+/* Center the buttons horizontally with spacing */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+}
+
+button {
+    padding: 40px 60px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #b3887d;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #d48d7b;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #d48d7b;
+    transform: scale(0.95);
+}
+
+.input-box {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Ensure .box is at the top of the page */
+.box {
+    width: 270px;
+    padding: 12px 20px;
+    background-color: #e89f9f;
+    margin-top:-800px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 20px auto 20px auto;  /* Margin to keep it at the top */
+    position: relative;  /* Allow positioning relative to normal flow */
+    z-index: 10; /* Ensure it's above other content */
+}
+
+#homepageButton {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#homepageButton:hover {
+    background-color: #45a049;
+}
+
+/* Wrapper to align both elements on the left */
+.left-align-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -700px; 
+    margin-top: 40px;
+    gap: 15px;
+}
+
+#selectCourseBox {
+    width: 270px;
+    padding: 12px 20px;
+    background-color: #e89f9f;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#courseInput {
+    width: 270px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#courseInput:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(0, 128, 0, 0.5);
+    background-color: #f0f8ff;
+}
+
+#suggestions {
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 270px;
+    margin-top: 120px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+    padding: 8px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #e86e6e;
+}
+
+#yearList {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+
+.year-item {
+    padding: 8px;
+    width: 250px;
+    z-index: 1;
+    max-height: 100px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
+}
+
+.year-item:hover {
+    background-color: #e09999;
+}
+
+.semester-item {
+    padding: 8px;
+    width: 250px;
+    z-index: 1;
+    max-height: 100px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
+    
+}
+
+.semester-item:hover {
+    background-color: #e09999;
+}
+
+/* Overall layout for results content */
+.results-content {
+    display: flex;
+    justify-content: space-between; /* Space between the table and pie chart */
+     /* Align the items to the top */
+    gap: 20px; /* Adds a little gap between the table and the pie chart */
+    padding: 20px;
+}
+
+/* Container for the table */
+.table-container {
+    width: 48%; /* Takes up 48% of the available width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e99a9a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}   
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #000000;
+    background-color: #f4f4f4;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Container for the pie chart */
+.pie-chart-container {
+    width: 48%; /* Takes up 48% of the available width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #e99999;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(203, 140, 140);
+    color: black;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: lightyellow;
+        padding: 10px;
+    }
+
+    h1 {
+        color: darkgreen;
+    }
+
+    /* Additional mobile-specific styles here */
+}
