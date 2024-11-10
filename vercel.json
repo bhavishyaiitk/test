@@ -5,10 +5,6 @@
       "use": "@vercel/static"
     },
     {
-      "src": "mobile_index.html",
-      "use": "@vercel/static"
-    },
-    {
       "src": "app.js",
       "use": "@vercel/node"
     }
@@ -25,10 +21,6 @@
     {
       "src": "/",
       "dest": "/index.html"
-    },
-    {
-      "src": "/mobile",
-      "dest": "/mobile_index.html"
     }
   ]
 }
