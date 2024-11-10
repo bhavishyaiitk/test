@@ -8,10 +8,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "cors": "^2.8.5",
-    "xlsx": "^0.17.0",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
-}
+    "xlsx": "^0.17.0"
+  }
 }
