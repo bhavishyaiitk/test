@@ -5,7 +5,7 @@ const path = require('path');
 
 const app = express();
 app.use(cors());
-app.use(express.static(__dirname + "public"));
+app.use(express.static(__dirname + "/public"));
 
 // Load and parse the Excel file
 const workbook = xlsx.readFile(path.join(__dirname, 'prof_grades.xlsx'));
@@ -25,7 +25,7 @@ const formattedData = data.map(row => ({
 
 // Serve the main HTML page
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'public', 'index.html'));
+    res.sendFile(path.join(__dirname,'public/index.html'));
 });
 
 // Search for a course by name
