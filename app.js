@@ -5,22 +5,13 @@ const path = require('path');
 
 const app = express();
 app.use(cors());
+app.use(express.static('public'));
 
 // Load and parse the Excel file
 const workbook = xlsx.readFile(path.join(__dirname, 'prof_grades.xlsx'));
 const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 const data = xlsx.utils.sheet_to_json(worksheet);
 
-// Configure CORS to explicitly allow your client origin
-const corsOptions = {
-    origin: 'https://test-eight-teal-40.vercel.app/',  // Replace with your frontend’s Vercel domain or localhost for testing
-    methods: ['GET', 'POST'],                 // Allow specific methods
-    allowedHeaders: ['Content-Type'],         // Allow specific headers
-};
-
-app.use(cors({
-    origin: 'https://test-eight-teal-40.vercel.app'  // Replace with your actual front-end domain
-}));
 
 
 // Ensure consistency in data fields by trimming whitespace and converting types
