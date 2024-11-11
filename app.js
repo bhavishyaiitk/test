@@ -5,7 +5,7 @@ const path = require('path');
 
 const app = express();
 app.use(cors());
-app.use(express.static('public'));
+app.use(express.static(__dirname + "/public"));
 
 // Load and parse the Excel file
 const workbook = xlsx.readFile(path.join(__dirname, 'prof_grades.xlsx'));
