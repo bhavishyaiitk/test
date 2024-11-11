@@ -25,7 +25,7 @@ const formattedData = data.map(row => ({
 
 // Serve the main HTML page
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname,'public', 'index.html'));
 });
 
 // Search for a course by name
